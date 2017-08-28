@@ -7,7 +7,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const nunjucks = require('nunjucks');
 
-var port = 3000;
+var port = process.env.port || 3000;
 
 
 app.use('/vendor', express.static(path.join((__dirname, 'node_modules'))));
